@@ -6,10 +6,10 @@ import os
 
 app = Flask(__name__)
 
-CLIENT_ID = "1523459509417283704"
-CLIENT_SECRET = "knLcCt-u5IectyO0PyVMIwhnSDbpkOiV"
-REDIRECT_URI = "REDIRECT_URI = "https://web-production-8672a.up.railway.app/callback""
-BOT_TOKEN = ""
+CLIENT_ID = os.environ.get("CLIENT_ID")
+CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+REDIRECT_URI = os.environ.get("REDIRECT_URI")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 # --- ตั้งค่าฐานข้อมูล ---
 conn = sqlite3.connect("servers.db", check_same_thread=False)
